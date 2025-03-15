@@ -1,0 +1,303 @@
+.how-it-works-container {
+    box-sizing: border-box;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Header Section with Advanced Styling */
+.how-it-works-headersubcontainer .header-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+
+.how-it-works-headersubcontainer h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.how-it-works-headersubcontainer > .header-section > p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Detection Process Steps with Advanced Interactions */
+.detection-process {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.detection-step {
+    background-color: var(--background-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 
+        0 15px 30px rgba(37, 99, 235, 0.1),
+        0 5px 15px rgba(37, 99, 235, 0.05);
+    transform: perspective(1000px) rotateX(-10deg);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.detection-step::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg, 
+        transparent, 
+        rgba(37, 99, 235, 0.05), 
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.detection-step:hover {
+    transform: perspective(1000px) rotateX(0) scale(1.05);
+    box-shadow: 
+        0 25px 50px rgba(37, 99, 235, 0.15),
+        0 10px 20px rgba(37, 99, 235, 0.1);
+}
+
+.detection-step:hover::before {
+    opacity: 1;
+}
+
+.step-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+    color: white;
+}
+
+.step-number {
+    font-weight: 700;
+    color: var(--thiritary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.step-content h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Additional Sections with Advanced Styling */
+.technology-overview, 
+.accuracy-overview,
+.testimonials,
+.privacy-security,
+.early-detection-benefits,
+.next-steps,
+.interactive-demo {
+    background-color: var(--background-secondary);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 
+        0 20px 40px rgba(37, 99, 235, 0.1),
+        0 10px 20px rgba(37, 99, 235, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.technology-overview h2,
+.accuracy-overview h2,
+.testimonials h2,
+.privacy-security h2,
+.early-detection-benefits h2,
+.next-steps h2,
+.interactive-demo h2 {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Additional Micro-Interactions */
+@keyframes subtle-float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.detection-step:hover .step-icon-container {
+    animation: subtle-float 1.5s ease infinite;
+}
+
+/* Responsive Breakpoints */
+
+/* Ultra-Small Devices (up to 320px) */
+@media screen and (max-width: 320px) {
+    .how-it-works-container {
+      padding: 1rem 0.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .how-it-works-headersubcontainer h1 {
+        font-size: 2rem; /* Reduce heading size */
+    }
+
+    .how-it-works-headersubcontainer > .header-section > p {
+        font-size: 1rem; /* Reduce paragraph font size */
+    }
+
+    .detection-step {
+        padding: 1rem; /* Reduce padding for steps */
+    }
+
+    .step-icon-container {
+        width: 60px; /* Reduce icon container size */
+        height: 60px;
+    }
+
+    .step-content h3 {
+        font-size: 1.2rem; /* Reduce step heading size */
+    }
+
+    .step-content p {
+        font-size: 0.875rem; /* Reduce step paragraph size */
+    }
+
+    .technology-overview,
+    .accuracy-overview,
+    .testimonials,
+    .privacy-security,
+    .early-detection-benefits,
+    .next-steps,
+    .interactive-demo {
+        padding: 1.5rem; /* Reduce padding for additional sections */
+    }
+
+    .technology-overview h2,
+    .accuracy-overview h2,
+    .testimonials h2,
+    .privacy-security h2,
+    .early-detection-benefits h2,
+    .next-steps h2,
+    .interactive-demo h2 {
+        font-size: 1.8rem; /* Reduce section heading size */
+    }
+}
+
+/* Ultra-Small Devices (up to 480px) */
+@media screen and (max-width: 480px) {
+.how-it-works-container {
+    padding: 2rem 0.5rem;
+}
+
+.detection-process {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.detection-step {
+    padding: 1.5rem;
+}
+
+.step-icon-container {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .detection-process {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Large Tablets and Small Desktops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .detection-process {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* High-Resolution and 4K Displays */
+@media screen and (min-width: 1921px) {
+    .how-it-works-container {
+        max-width: 1600px;
+    }
+
+    .detection-process {
+        gap: 3rem;
+    }
+}
+
+/* Accessibility and Print Styles */
+@media print {
+    .how-it-works-container {
+        padding: 1rem;
+    }
+
+    .detection-step {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* High Contrast and Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .detection-step {
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .detection-step {
+        transition: none;
+    }
+
+    .detection-step:hover {
+        transform: none;
+    }
+}

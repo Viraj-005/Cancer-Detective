@@ -1,0 +1,438 @@
+/* Profile Section Container */
+.profile-section {
+    position: relative;
+    margin-left: 20px;
+    z-index: 1000;
+    max-height: 80%;
+}
+
+/* Profile Trigger Styles */
+.profile-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.profile-trigger:hover {
+    transform: scale(1.05);
+}
+
+.profile-trigger:active {
+    transform: scale(0.95);
+}
+
+/* Profile Image Styles */
+.profile-image {
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+/* Profile Initials Styles */
+.profile-initials {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-initials:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+/* Dropdown Menu Styles */
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: dropdownFadeIn 0.3s ease forwards;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+@keyframes dropdownFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    color: #333333;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8fafc;
+    color: #2563eb;
+}
+
+.dropdown-item svg {
+    font-size: 18px;
+    color: #64748b;
+    transition: color 0.2s ease;
+}
+
+.dropdown-item:hover svg {
+    color: #2563eb;
+}
+
+/* Profile Modal Overlay */
+.profile-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    padding: 20px;
+    animation: modalFadeIn 0.3s ease forwards;
+}
+
+@keyframes modalFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Profile Modal Container */
+.profile-modal-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    max-height: 50vh;
+    overflow-y: auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95);
+    opacity: 0;
+    animation: modalContentFadeIn 0.3s ease forwards;
+    margin-top: 600px;
+}
+
+@keyframes modalContentFadeIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Profile Modal Header */
+.profile-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.profile-modal-header h2 {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.profile-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #64748b;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.profile-modal-close:hover {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Profile Modal Content */
+.profile-modal-content {
+    margin: 24px 0;
+}
+
+.profile-info-row {
+    display: flex;
+    margin: 16px 0;
+    align-items: center;
+    padding: 12px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.profile-info-row:hover {
+    background-color: #f1f5f9;
+}
+
+.profile-info-label {
+    font-weight: 600;
+    width: 120px;
+    color: #64748b;
+    text-align: left;
+}
+
+.profile-info-value {
+    color: #1e293b;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Google Icon Style */
+.google-account-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* Profile Modal Footer */
+.profile-modal-footer {
+    margin-top: 24px;
+}
+
+.profile-delete-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.profile-delete-btn:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.profile-delete-btn:active {
+    transform: translateY(0);
+}
+
+/* Delete Confirmation Styles */
+.profile-delete-confirm {
+    margin-top: 24px;
+    padding: 20px;
+    background-color: #fee2e2;
+    border-radius: 8px;
+    border: 1px solid #fecaca;
+}
+
+.profile-delete-confirm p {
+    color: #991b1b;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.profile-delete-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.profile-delete-actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.profile-delete-confirm-btn {
+    background-color: #ef4444;
+    color: white;
+}
+
+.profile-delete-confirm-btn:hover {
+    background-color: #dc2626;
+}
+
+.profile-delete-cancel-btn {
+    background-color: #6b7280;
+    color: white;
+}
+
+.profile-delete-cancel-btn:hover {
+    background-color: #4b5563;
+}
+
+/* Focus Styles for Accessibility */
+.dropdown-item:focus,
+.profile-delete-btn:focus,
+.profile-modal-close:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Loading State Styles */
+.profile-section.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Error State Styles */
+.error-message {
+    color: #ef4444;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+    .profile-modal-container {
+        max-width: 350px;
+        padding: 40px;
+    }
+
+    .profile-dropdown {
+        min-width: 250px;
+    }
+
+    .profile-info-label {
+        width: 120px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .profile-modal-container {
+        max-width: 300px;
+        padding: 30px;
+    }
+
+    .profile-dropdown {
+        min-width: 200px;
+    }
+
+    .profile-info-label {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-modal-container {
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .profile-dropdown {
+        min-width: 160px;
+    }
+
+    .profile-info-label {
+        width: 80px;
+    }
+
+    .profile-info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .profile-info-value {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-modal-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .profile-dropdown {
+        min-width: 140px;
+    }
+
+    .profile-info-label {
+        width: 80px;
+    }
+
+    .profile-delete-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .profile-image {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .profile-modal-container {
+        max-width: 80%;
+        padding: 10px;
+    }
+
+    .profile-dropdown {
+        min-width: 120px;
+    }
+
+    .profile-info-row {
+        padding: 8px;
+    }
+
+    .profile-delete-btn {
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,300 @@
+/* Overall container styling */
+.notfound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding: 40px 60px;
+    margin: 32px 20px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+}
+.notfound-content {
+    text-align: center;
+    align-items: center;
+    margin-top: -60px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.error-icon {
+    font-size: 5em;
+    color: #f44336; /* Red color for the error icon */
+    margin-bottom: 20px;
+}
+
+.go-home-button {
+    background-color: #242b60;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.go-home-button:hover {
+    background-color: #1f244a;
+}
+
+.go-home-button:focus {
+    outline: none;
+}
+
+/* Adding responsiveness */
+
+/* Ultra-Small Devices (up to 320px) */
+@media screen and (max-width: 320px) {
+    .notfound-container {
+      height: 40vh; /* Smaller height */
+      padding: 20px; /* Smaller padding */
+      margin: 20px 10px; /* Smaller margins */
+      border-radius: 15px; /* Smaller border radius */
+      margin-bottom: 30px; /* Smaller bottom margin */
+    }
+  
+    .notfound-content {
+      margin-top: -40px; /* Adjust top margin */
+    }
+  
+    h1 {
+      font-size: 2em; /* Smaller heading */
+    }
+  
+    p {
+      font-size: 0.9em; /* Smaller paragraph */
+      margin-bottom: 20px; /* Smaller margin */
+    }
+  
+    .error-icon {
+      font-size: 3em; /* Smaller icon */
+      margin-bottom: 15px; /* Smaller margin */
+    }
+  
+    .go-home-button {
+      font-size: 0.9em; /* Smaller button text */
+      padding: 8px 16px; /* Smaller button padding */
+      border-radius: 20px; /* Smaller border radius */
+    }
+}
+
+/* Small Devices (321px to 480px) */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .notfound-container {
+      height: 45vh; /* Slightly larger height */
+      padding: 25px; /* Slightly larger padding */
+      margin: 25px 15px; /* Slightly larger margins */
+      border-radius: 20px; /* Slightly larger border radius */
+      margin-bottom: 35px; /* Slightly larger bottom margin */
+    }
+  
+    .notfound-content {
+      margin-top: -50px; /* Adjust top margin */
+    }
+  
+    h1 {
+      font-size: 2.2em; /* Slightly larger heading */
+    }
+  
+    p {
+      font-size: 1em; /* Slightly larger paragraph */
+      margin-bottom: 25px; /* Slightly larger margin */
+    }
+  
+    .error-icon {
+      font-size: 3.5em; /* Slightly larger icon */
+      margin-bottom: 18px; /* Slightly larger margin */
+    }
+  
+    .go-home-button {
+      font-size: 1em; /* Slightly larger button text */
+      padding: 10px 18px; /* Slightly larger button padding */
+      border-radius: 22px; /* Slightly larger border radius */
+    }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .notfound-container {
+      height: 50vh; /* Larger height */
+      padding: 30px; /* Larger padding */
+      margin: 30px 20px; /* Larger margins */
+      border-radius: 25px; /* Larger border radius */
+      margin-bottom: 40px; /* Larger bottom margin */
+    }
+  
+    .notfound-content {
+      margin-top: -60px; /* Adjust top margin */
+    }
+  
+    h1 {
+      font-size: 2.5em; /* Larger heading */
+    }
+  
+    p {
+      font-size: 1.1em; /* Larger paragraph */
+      margin-bottom: 30px; /* Larger margin */
+    }
+  
+    .error-icon {
+      font-size: 4em; /* Larger icon */
+      margin-bottom: 20px; /* Larger margin */
+    }
+  
+    .go-home-button {
+      font-size: 1.1em; /* Larger button text */
+      padding: 12px 22px; /* Larger button padding */
+      border-radius: 25px; /* Larger border radius */
+    }
+}
+
+/* Small Desktops and Large Tablets (769px to 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .notfound-container {
+      height: 55vh; /* Larger height */
+      padding: 40px; /* Larger padding */
+      margin: 40px 30px; /* Larger margins */
+      border-radius: 30px; /* Larger border radius */
+      margin-bottom: 50px; /* Larger bottom margin */
+    }
+  
+    .notfound-content {
+      margin-top: -70px; /* Adjust top margin */
+    }
+  
+    h1 {
+      font-size: 2.8em; /* Larger heading */
+    }
+  
+    p {
+      font-size: 1.2em; /* Larger paragraph */
+      margin-bottom: 35px; /* Larger margin */
+    }
+  
+    .error-icon {
+      font-size: 4.5em; /* Larger icon */
+      margin-bottom: 25px; /* Larger margin */
+    }
+  
+    .go-home-button {
+      font-size: 1.2em; /* Larger button text */
+      padding: 14px 24px; /* Larger button padding */
+      border-radius: 28px; /* Larger border radius */
+    }
+}
+
+/* Large Desktops (993px to 1200px) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .notfound-container {
+      height: 60vh; /* Larger height */
+      padding: 50px; /* Larger padding */
+      margin: 50px 40px; /* Larger margins */
+      border-radius: 35px; /* Larger border radius */
+      margin-bottom: 60px; /* Larger bottom margin */
+    }
+  
+    .notfound-content {
+      margin-top: -80px; /* Adjust top margin */
+    }
+  
+    h1 {
+      font-size: 3em; /* Larger heading */
+    }
+  
+    p {
+      font-size: 1.3em; /* Larger paragraph */
+      margin-bottom: 40px; /* Larger margin */
+    }
+  
+    .error-icon {
+      font-size: 5em; /* Larger icon */
+      margin-bottom: 30px; /* Larger margin */
+    }
+  
+    .go-home-button {
+      font-size: 1.3em; /* Larger button text */
+      padding: 16px 28px; /* Larger button padding */
+      border-radius: 30px; /* Larger border radius */
+    }
+}
+
+/* Extra Large Desktops (1201px to 1920px) */
+@media screen and (min-width: 1201px) and (max-width: 1920px) {
+    .notfound-container {
+      height: 65vh; /* Extra large height */
+      padding: 60px; /* Extra large padding */
+      margin: 60px 50px; /* Extra large margins */
+      border-radius: 40px; /* Extra large border radius */
+      margin-bottom: 70px; /* Extra large bottom margin */
+    }
+  
+    .notfound-content {
+      margin-top: -90px; /* Adjust top margin */
+    }
+  
+    h1 {
+      font-size: 3.5em; /* Extra large heading */
+    }
+  
+    p {
+      font-size: 1.4em; /* Extra large paragraph */
+      margin-bottom: 45px; /* Extra large margin */
+    }
+  
+    .error-icon {
+      font-size: 6em; /* Extra large icon */
+      margin-bottom: 35px; /* Extra large margin */
+    }
+  
+    .go-home-button {
+      font-size: 1.4em; /* Extra large button text */
+      padding: 18px 32px; /* Extra large button padding */
+      border-radius: 35px; /* Extra large border radius */
+    }
+}
+
+/* 4K Resolution (1921px and above) */
+@media screen and (min-width: 1921px) {
+    .notfound-container {
+      height: 70vh; /* 4K height */
+      padding: 80px; /* 4K padding */
+      margin: 80px 60px; /* 4K margins */
+      border-radius: 50px; /* 4K border radius */
+      margin-bottom: 80px; /* 4K bottom margin */
+    }
+  
+    .notfound-content {
+      margin-top: -100px; /* Adjust top margin */
+    }
+  
+    h1 {
+      font-size: 4em; /* 4K heading */
+    }
+  
+    p {
+      font-size: 1.5em; /* 4K paragraph */
+      margin-bottom: 50px; /* 4K margin */
+    }
+  
+    .error-icon {
+      font-size: 7em; /* 4K icon */
+      margin-bottom: 40px; /* 4K margin */
+    }
+  
+    .go-home-button {
+      font-size: 1.5em; /* 4K button text */
+      padding: 20px 36px; /* 4K button padding */
+      border-radius: 40px; /* 4K border radius */
+    }
+}

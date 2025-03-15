@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --thiritary-color: #eb1948;
+    --accent-color: #10b981;
+    --text-dark: #1f2937;
+    --text-primary: #1a2c3d;
+    --text-secondary: #475569;
+    --background-light: #f8f9fa;
+    --text-light: #6b7280;
+    --background-primary: #f3f4f6;
+    --background-secondary: #ffffff;
+
+    /* Gradient Effects */
+    --gradient-primary: linear-gradient(135deg, #0d1130 0%, #2575fc 100%);
+    --gradient-accent: linear-gradient(to right, #ff6a00, #eb1948);
+    
+    /* Typography */
+    --font-family-base: 'Montserrat', Arial, sans-serif;
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Additional Design Tokens */
+    --border-radius: 12px;
+    --box-shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --box-shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+    /* Toast Notifications */
+    --toast-success-bg: #4CAF50;
+    --toast-error-bg: #F44336;
+    --toast-warning-bg: #FF9800;
+    --toast-info-bg: #2196F3;
+
+    --cell-color-normal: rgba(37, 99, 235, 0.1);
+    --cell-color-abnormal: rgba(235, 25, 72, 0.1);
+
+    /* Breakpoint Tokens */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-large-desktop: 1400px;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--background-primary);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overscroll-behavior: none;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(37, 99, 235, 0.03) 0%, 
+        rgba(235, 25, 72, 0.03) 100%
+    );
+    z-index: -2;
+    opacity: 0.8;
+}
+
+.medical-background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.cell-icon {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.3;
+    animation: 
+        cell-pulse 6s infinite alternate,
+        cell-drift 15s infinite ease-in-out;
+}
+
+.cell-icon.normal {
+    color: var(--cell-color-normal);
+}
+
+.cell-icon.abnormal {
+    color: var(--cell-color-abnormal);
+}
+
+.cell-icon:nth-child(1) { 
+    top: 10%; 
+    left: 5%; 
+    animation-delay: -2s;
+}
+.cell-icon:nth-child(2) { 
+    top: 80%; 
+    right: 15%; 
+    animation-delay: -5s;
+}
+.cell-icon:nth-child(3) { 
+    bottom: 20%; 
+    left: 25%; 
+    animation-delay: -3s;
+}
+.cell-icon:nth-child(4) { 
+    top: 50%; 
+    right: 35%; 
+    animation-delay: -7s;
+}
+.cell-icon:nth-child(5) { 
+    bottom: 60%; 
+    left: 65%; 
+    animation-delay: -4s;
+}
+
+/* Safari and older browsers fallback */
+@supports not (overscroll-behavior: none) {
+    body {
+        overflow-y: scroll;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Typography */
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.spinner-icon {
+    margin-right: 8px; /* Space between the spinner and text */
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes cell-pulse {
+    0%, 100% { transform: scale(0.9); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes cell-drift {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(20px) rotate(15deg); }
+    100% { transform: translateX(-20px) rotate(-15deg); }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+}

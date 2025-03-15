@@ -1,0 +1,430 @@
+/* Base Reset and Global Styles */
+.about-container {
+  box-sizing: border-box;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle Background Pattern */
+/* .about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(
+      45deg, 
+      rgba(52, 152, 219, 0.03) 25%, 
+      transparent 25%, 
+      transparent 50%, 
+      rgba(52, 152, 219, 0.03) 50%, 
+      rgba(52, 152, 219, 0.03) 75%, 
+      transparent 75%, 
+      transparent
+    );
+  background-size: 60px 60px;
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+} */
+
+/* Header Styling */
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.about-header p {
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/* Grid Layout with Advanced Styling */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Card Design */
+.about-content > div {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.05), 
+    0 10px 20px -5px rgba(0, 0, 0, 0.04);
+  transition: 
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover and Interaction Effects */
+.about-content > div:hover {
+  transform: translateY(-15px);
+  box-shadow: 
+    0 35px 60px -15px rgba(0, 0, 0, 0.08),
+    0 15px 25px -8px rgba(0, 0, 0, 0.06);
+  border-color: var(--primary-color);
+}
+
+/* Decorative Border Effect */
+.about-content > div::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(
+      circle at center, 
+      rgba(52, 152, 219, 0.1) 0%, 
+      transparent 70%
+    );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.about-content > div:hover::before {
+  opacity: 1;
+}
+
+/* Icon Styling */
+.about-icon {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  transition: 
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.about-content > div:hover .about-icon {
+  transform: scale(1.1) rotate(5deg);
+  color: var(--thiritary-color);
+}
+
+/* Typography Refinements */
+.about-content h2 {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.about-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.about-content p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Subtle Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-content > div {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Staggered Animation Delays */
+.about-content > div:nth-child(1) { animation-delay: 0.1s; }
+.about-content > div:nth-child(2) { animation-delay: 0.2s; }
+.about-content > div:nth-child(3) { animation-delay: 0.3s; }
+.about-content > div:nth-child(4) { animation-delay: 0.4s; }
+.about-content > div:nth-child(5) { animation-delay: 0.5s; }
+.about-content > div:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive Breakpoints */
+
+/* Ultra-Small Devices (up to 320px) */
+@media screen and (max-width: 320px) {
+  .about-container {
+    padding: 1rem 0.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .about-header h1 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  .about-header p {
+    font-size: 0.85rem; /* Reduce paragraph font size */
+  }
+
+  .about-content > div {
+    padding: 1rem; /* Reduce padding for cards */
+  }
+
+  .about-icon {
+    font-size: 1.8rem; /* Reduce icon size */
+  }
+
+  .about-content h2 {
+    font-size: 1.3rem; /* Reduce card heading size */
+  }
+
+  .about-content p {
+    font-size: 0.8rem; /* Reduce card paragraph size */
+  }
+
+  .about-content h2::after {
+    width: 40px; /* Reduce underline width */
+    height: 3px; /* Reduce underline height */
+  }
+}
+
+/* Small Devices (321px to 480px) */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .about-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-header p {
+    font-size: 0.9rem;
+  }
+
+  .about-content > div {
+    padding: 1rem;
+  }
+
+  .about-icon {
+    font-size: 2rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-content p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-header p {
+    font-size: 0.95rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-content > div {
+    padding: 1.5rem;
+  }
+
+  .about-icon {
+    font-size: 2.2rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Desktops and Large Tablets (769px to 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .about-container {
+    padding: 2.5rem 1rem;
+  }
+
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    gap: 1rem;
+  }
+
+  .about-content > div {
+    padding: 1.5rem;
+  }
+
+  .about-icon {
+    font-size: 2.5rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium Desktops (993px to 1200px) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .about-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-header h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-header p {
+    font-size: 1.1rem;
+  }
+
+  .about-content {
+    gap: 1.5rem;
+  }
+
+  .about-content > div {
+    padding: 2rem;
+  }
+
+  .about-icon {
+    font-size: 2.8rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Large Desktops (1201px to 1920px) */
+@media screen and (min-width: 1201px) and (max-width: 1920px) {
+  .about-container {
+    padding: 4rem 2rem;
+  }
+
+  .about-header h1 {
+    font-size: 3rem;
+  }
+
+  .about-header p {
+    font-size: 1.2rem;
+  }
+
+  .about-content {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .about-content > div {
+    padding: 2.5rem;
+  }
+
+  .about-icon {
+    font-size: 3rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Ultra-Large Desktops and 4K Displays (1921px and above) */
+@media screen and (min-width: 1921px) {
+  .about-container {
+    max-width: 1400px; /* Increase max-width for larger screens */
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+
+  .about-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .about-header p {
+    font-size: 1.3rem;
+  }
+
+  .about-content {
+    gap: 3rem;
+  }
+
+  .about-content > div {
+    padding: 3rem;
+  }
+
+  .about-icon {
+    font-size: 3.5rem;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1.2rem;
+  }
+}

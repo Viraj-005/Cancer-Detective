@@ -1,0 +1,250 @@
+.footer-container {
+  background-color: #14202f;
+  color: white;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 1.25rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.footer-text {
+  max-width: 32rem;
+}
+
+.footer-text h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.logo-image {
+  width: 50px; /* Adjust logo size */
+  height: 50px;
+  margin-right: 10px;
+}
+
+.footer-text p {
+  font-size: 0.975rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links ul li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links ul li a:hover {
+  color: #3b82f6;
+  transform: translateX(5px);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-icons a {
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #3b82f6;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid #2d3748;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-legal a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+  color: #3b82f6;
+}
+
+.divider {
+  color: #4a5568;
+}
+
+/* Responsive Breakpoints */
+
+/* Ultra-Small Devices (up to 370px) */
+@media screen and (max-width: 370px) {
+  .footer-container {
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+    margin: 1rem 0.5rem; /* Adjust margin for smaller screens */
+    border-radius: 1rem; /* Slightly reduce border radius */
+  }
+
+  .footer-text h2 {
+    font-size: 1.5rem; /* Reduce heading size */
+  }
+
+  .footer-text p {
+    font-size: 0.875rem; /* Reduce paragraph font size */
+  }
+
+  .footer-links h3,
+  .footer-social h3 {
+    font-size: 1.125rem; /* Reduce subheading size */
+  }
+
+  .footer-links ul li a {
+    font-size: 0.875rem; /* Reduce link font size */
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem; /* Reduce footer bottom text size */
+  }
+
+  .footer-legal a {
+    font-size: 0.75rem; /* Reduce legal link font size */
+  }
+
+  .social-icons {
+    gap: 1rem; /* Reduce gap between social icons */
+  }
+
+  .logo-image {
+    width: 40px; /* Reduce logo size */
+    height: 40px;
+  }
+}
+
+/* Ultra-Small Devices (up to 480px) */
+@media screen and (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-text,
+  .footer-links,
+  .footer-social {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-links ul li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Small Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-social {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Large Tablets and Small Desktops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* High-Resolution and 4K Displays */
+@media screen and (min-width: 1921px) {
+  .footer-container {
+    max-width: 1600px;
+    margin: 2rem auto;
+  }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+  .footer-links ul li a:hover,
+  .social-icons a:hover,
+  .footer-legal a:hover {
+      transform: none;
+      transition: color 0.2s ease;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .footer-container {
+      background: white;
+      color: black;
+      box-shadow: none;
+      margin: 0;
+      padding: 1rem;
+  }
+
+  .footer-links a,
+  .footer-legal a {
+      color: black;
+  }
+}

@@ -1,0 +1,11 @@
+.legal-layout {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .legal-layout {
+        padding: 1rem;
+    }
+}

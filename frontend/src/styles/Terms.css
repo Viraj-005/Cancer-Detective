@@ -1,0 +1,118 @@
+.terms-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.terms-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.terms-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.language-selector {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 200px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.language-selector:hover {
+    border-color: #10B981;
+}
+
+.language-selector:focus {
+    outline: none;
+    border-color: #10B981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+.terms-content {
+    line-height: 1.8;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.terms-content pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    margin: 0;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: #10B981;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles for AuthForm */
+.terms-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+}
+
+.terms-footer a {
+    color: #10B981;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.terms-footer span {
+    color: #666;
+    margin: 0 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 1rem;
+    }
+
+    .terms-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .terms-title {
+        font-size: 2rem;
+    }
+
+    .language-selector {
+        width: 100%;
+    }
+
+    .terms-content {
+        font-size: 1rem;
+    }
+}

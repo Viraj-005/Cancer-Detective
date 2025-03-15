@@ -1,0 +1,789 @@
+/* AuthForm.css */
+.form-container {
+    /* background-color: white; */
+    padding: 40px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    max-width: 400px;
+    width: 100%;
+    margin-left: 500px;
+    margin-top: 70px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-logo {
+    width: 100px; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+.input-wrapper input:focus {
+    border-color: #3D56FF; 
+    box-shadow: 0 0 0 2px rgba(61, 86, 255, 0.2); 
+}
+
+.input-wrapper input:focus + .input-icon {
+    color: #3D56FF;
+}
+
+.form-button {
+    padding: 10px 15px;
+    background-color: #3D56FF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-button:hover {
+    background-color: #2c44cc;
+}
+
+.google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #000;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.google-button:hover {
+    background-color: #f1f1f1;
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.toggle-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+}
+
+.toggle-link {
+    color: #3D56FF;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.spinner-load {
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin: 5px;
+}
+
+.legal-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.legal-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+/* Add to your language selector CSS */
+.language-selector {
+    position: relative;
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.language-dropdown {
+    padding: 10px 40px 10px 16px;
+    font-size: 15px;
+    line-height: 1.6;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: white;
+    color: #2d3748;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234A5568' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    min-width: 220px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.language-dropdown:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.language-dropdown:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(128, 90, 213, 0.25);
+}
+
+.language-dropdown option {
+    padding: 12px;
+    font-size: 14px;
+}
+
+.language-dropdown option:disabled {
+    color: #a0aec0;
+    background-color: #f7fafc;
+    border-top: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Legal Documents Container Styles */
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1a202c;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.content-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.content-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.content-section li {
+    color: #4a5568;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Password Requirements Container Styles */
+.password-requirements-container {
+    margin-top: 8px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.password-requirements-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3+, Safari on iOS 3+ */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.password-requirements-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.password-requirements-header svg {
+    color: #888;
+}
+
+.password-requirements {
+    padding: 0 10px 10px;
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirements-list li {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 6px;
+    padding: 2px 0;
+    transition: all 0.2s ease;
+}
+
+.requirements-list li:last-child {
+    margin-bottom: 0;
+}
+
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.requirements-list li.valid {
+    color: #2e7d32;
+}
+
+.requirements-list li.invalid {
+    color: #888;
+}
+
+.requirements-list li.valid .check-icon {
+    background-color: #4caf50;
+    color: white;
+}
+
+.requirements-list li.invalid .check-icon {
+    background-color: #e0e0e0;
+    color: #888;
+}
+
+/* Animation for requirement checks */
+.requirements-list li {
+    transform-origin: left;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Success Message Styling */
+.email-sent-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+    font-size: 48px;
+    color: #28a745;
+    margin-bottom: 16px;
+}
+
+.email-sent-message h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.email-sent-message p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.resend-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.resend-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+
+/* Ultra-Small Devices (up to 320px) */
+@media screen and (max-width: 320px) {
+    .form-container {
+      margin: 20px auto; /* Center the form */
+      padding: 20px; /* Reduce padding */
+      max-width: 100%; /* Full width */
+      width: calc(100% - 40px); /* Account for margins */
+      margin-top: 40px; /* Adjust top margin */
+    }
+  
+    .form-logo {
+      width: 80px; /* Smaller logo */
+    }
+  
+    .form h2 {
+      font-size: 1.25rem; /* Smaller heading */
+    }
+  
+    .input-wrapper input {
+      padding: 8px 8px 8px 32px; /* Smaller padding */
+    }
+  
+    .input-icon {
+      left: 8px; /* Adjust icon position */
+      font-size: 14px; /* Smaller icon */
+    }
+  
+    .eye-icon {
+      right: 8px; /* Adjust icon position */
+      font-size: 14px; /* Smaller icon */
+    }
+  
+    .form-button,
+    .google-button {
+      padding: 8px 12px; /* Smaller buttons */
+      font-size: 14px; /* Smaller font size */
+    }
+  
+    .toggle-text {
+      font-size: 12px; /* Smaller text */
+    }
+  
+    .legal-links {
+      font-size: 12px; /* Smaller text */
+    }
+  
+    .password-requirements-header p {
+      font-size: 12px; /* Smaller text */
+    }
+  
+    .requirements-list li {
+      font-size: 11px; /* Smaller text */
+    }
+  
+    .email-sent-message h2 {
+      font-size: 20px; /* Smaller heading */
+    }
+  
+    .email-sent-message p {
+      font-size: 14px; /* Smaller text */
+    }
+  
+    .resend-button {
+      padding: 8px 16px; /* Smaller button */
+      font-size: 14px; /* Smaller font size */
+    }
+}
+
+/* Small Devices (321px to 480px) */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .form-container {
+      margin: 20px auto; /* Center the form */
+      padding: 20px; /* Reduce padding */
+      max-width: 100%; /* Full width */
+      width: calc(100% - 40px); /* Account for margins */
+      margin-top: 40px; /* Adjust top margin */
+    }
+  
+    .form-logo {
+      width: 90px; /* Slightly larger logo */
+    }
+  
+    .form h2 {
+      font-size: 1.375rem; /* Slightly larger heading */
+    }
+  
+    .input-wrapper input {
+      padding: 10px 10px 10px 36px; /* Slightly larger padding */
+    }
+  
+    .input-icon {
+      left: 10px; /* Adjust icon position */
+      font-size: 16px; /* Slightly larger icon */
+    }
+  
+    .eye-icon {
+      right: 10px; /* Adjust icon position */
+      font-size: 16px; /* Slightly larger icon */
+    }
+  
+    .form-button,
+    .google-button {
+      padding: 10px 15px; /* Slightly larger buttons */
+      font-size: 15px; /* Slightly larger font size */
+    }
+  
+    .toggle-text {
+      font-size: 13px; /* Slightly larger text */
+    }
+  
+    .legal-links {
+      font-size: 13px; /* Slightly larger text */
+    }
+  
+    .password-requirements-header p {
+      font-size: 13px; /* Slightly larger text */
+    }
+  
+    .requirements-list li {
+      font-size: 12px; /* Slightly larger text */
+    }
+  
+    .email-sent-message h2 {
+      font-size: 22px; /* Slightly larger heading */
+    }
+  
+    .email-sent-message p {
+      font-size: 15px; /* Slightly larger text */
+    }
+  
+    .resend-button {
+      padding: 10px 18px; /* Slightly larger button */
+      font-size: 15px; /* Slightly larger font size */
+    }
+}
+
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .form-container {
+      margin: 40px auto; /* Center the form */
+      padding: 30px; /* Slightly larger padding */
+      max-width: 100%; /* Full width */
+      width: calc(100% - 80px); /* Account for margins */
+      margin-top: 60px; /* Adjust top margin */
+    }
+  
+    .form-logo {
+      width: 100px; /* Larger logo */
+    }
+  
+    .form h2 {
+      font-size: 1.5rem; /* Larger heading */
+    }
+  
+    .input-wrapper input {
+      padding: 12px 12px 12px 40px; /* Larger padding */
+    }
+  
+    .input-icon {
+      left: 12px; /* Adjust icon position */
+      font-size: 18px; /* Larger icon */
+    }
+  
+    .eye-icon {
+      right: 12px; /* Adjust icon position */
+      font-size: 18px; /* Larger icon */
+    }
+  
+    .form-button,
+    .google-button {
+      padding: 12px 20px; /* Larger buttons */
+      font-size: 16px; /* Larger font size */
+    }
+  
+    .toggle-text {
+      font-size: 14px; /* Larger text */
+    }
+  
+    .legal-links {
+      font-size: 14px; /* Larger text */
+    }
+  
+    .password-requirements-header p {
+      font-size: 14px; /* Larger text */
+    }
+  
+    .requirements-list li {
+      font-size: 13px; /* Larger text */
+    }
+  
+    .email-sent-message h2 {
+      font-size: 24px; /* Larger heading */
+    }
+  
+    .email-sent-message p {
+      font-size: 16px; /* Larger text */
+    }
+  
+    .resend-button {
+      padding: 12px 20px; /* Larger button */
+      font-size: 16px; /* Larger font size */
+    }
+}
+
+/* Small Desktops and Large Tablets (769px to 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .form-container {
+      margin: 60px auto; /* Center the form */
+      padding: 40px; /* Larger padding */
+      max-width: 100%; /* Full width */
+      width: calc(100% - 120px); /* Account for margins */
+      margin-top: 80px; /* Adjust top margin */
+    }
+  
+    .form-logo {
+      width: 120px; /* Larger logo */
+    }
+  
+    .form h2 {
+      font-size: 1.75rem; /* Larger heading */
+    }
+  
+    .input-wrapper input {
+      padding: 14px 14px 14px 44px; /* Larger padding */
+    }
+  
+    .input-icon {
+      left: 14px; /* Adjust icon position */
+      font-size: 20px; /* Larger icon */
+    }
+  
+    .eye-icon {
+      right: 14px; /* Adjust icon position */
+      font-size: 20px; /* Larger icon */
+    }
+  
+    .form-button,
+    .google-button {
+      padding: 14px 24px; /* Larger buttons */
+      font-size: 17px; /* Larger font size */
+    }
+  
+    .toggle-text {
+      font-size: 15px; /* Larger text */
+    }
+  
+    .legal-links {
+      font-size: 15px; /* Larger text */
+    }
+  
+    .password-requirements-header p {
+      font-size: 15px; /* Larger text */
+    }
+  
+    .requirements-list li {
+      font-size: 14px; /* Larger text */
+    }
+  
+    .email-sent-message h2 {
+      font-size: 26px; /* Larger heading */
+    }
+  
+    .email-sent-message p {
+      font-size: 17px; /* Larger text */
+    }
+  
+    .resend-button {
+      padding: 14px 24px; /* Larger button */
+      font-size: 17px; /* Larger font size */
+    }
+}
+
+/* Large Desktops (993px to 1200px) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .form-container {
+      margin: 80px auto; /* Center the form */
+      padding: 50px; /* Largest padding */
+      max-width: 100%; /* Full width */
+      width: calc(100% - 160px); /* Account for margins */
+      margin-top: 100px; /* Adjust top margin */
+    }
+  
+    .form-logo {
+      width: 150px; /* Largest logo */
+    }
+  
+    .form h2 {
+      font-size: 2rem; /* Largest heading */
+    }
+  
+    .input-wrapper input {
+      padding: 16px 16px 16px 48px; /* Largest padding */
+    }
+  
+    .input-icon {
+      left: 16px; /* Adjust icon position */
+      font-size: 22px; /* Largest icon */
+    }
+  
+    .eye-icon {
+      right: 16px; /* Adjust icon position */
+      font-size: 22px; /* Largest icon */
+    }
+  
+    .form-button,
+    .google-button {
+      padding: 16px 28px; /* Largest buttons */
+      font-size: 18px; /* Largest font size */
+    }
+  
+    .toggle-text {
+      font-size: 16px; /* Largest text */
+    }
+  
+    .legal-links {
+      font-size: 16px; /* Largest text */
+    }
+  
+    .password-requirements-header p {
+      font-size: 16px; /* Largest text */
+    }
+  
+    .requirements-list li {
+      font-size: 15px; /* Largest text */
+    }
+  
+    .email-sent-message h2 {
+      font-size: 28px; /* Largest heading */
+    }
+  
+    .email-sent-message p {
+      font-size: 18px; /* Largest text */
+    }
+  
+    .resend-button {
+      padding: 16px 28px; /* Largest button */
+      font-size: 18px; /* Largest font size */
+    }
+}
+
+
+

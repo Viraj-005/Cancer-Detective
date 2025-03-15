@@ -1,0 +1,436 @@
+/* General Styling */
+.contact-feedback-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:
+    0 35px 60px -15px rgba(0, 0, 0, 0.08),
+    0 15px 25px -8px rgba(0, 0, 0, 0.06);
+    gap: 20px; /* Adds a gap between the form and image */
+}
+
+.contact-form-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.contact-feedback-container h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+/* Success Message */
+.contact-feedback-container .success-message {
+    background-color: #e6f3e6;
+    color: #28a745;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-input {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-input input {
+    flex: 1;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-input input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Enhanced Subject Select */
+.contact-subject-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.contact-subject-select select {
+    flex-grow: 1;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+.contact-subject-select svg {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-subject-select:focus-within {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-textarea {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    width: 96%;
+    resize: vertical; /* Allows users to resize only vertically */
+    height: 120px; /* Sets a standard height */
+}
+
+.contact-textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-button {
+    position: relative;
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+.submitting-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.spinner-icon {
+    margin-right: 8px; /* Space between the spinner and text */
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Toast Container - for positioning all toasts */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Base Toast Styling */
+.toast-message {
+    position: relative;
+    padding: 16px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        0 0 1px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    max-width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* Toast Variants */
+.toast-message.success {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border-left: 4px solid #1e7e34;
+}
+
+.toast-message.error {
+    background: linear-gradient(135deg, #dc3545, #e74c3c);
+    border-left: 4px solid #bd2130;
+}
+
+.toast-message.info {
+    background: linear-gradient(135deg, #17a2b8, #0dcaf0);
+    border-left: 4px solid #138496;
+}
+
+/* Toast Content Layout */
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.toast-icon {
+    font-size: 20px;
+    min-width: 24px;
+}
+
+.toast-text {
+    font-weight: 500;
+    line-height: 1.4;
+    padding-right: 8px;
+}
+
+/* Close Button Styling */
+.close-toast {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease;
+    margin-left: 8px;
+}
+
+.close-toast:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.toast-exit {
+    animation: slideOut 0.3s ease forwards;
+}
+
+/* Progress Bar for Auto-Dismiss */
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0 0 12px 12px;
+}
+
+.toast-progress-bar {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 12px 12px;
+    transition: width linear;
+}
+
+/* Image Container */
+.contact-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image {
+    max-width: 100%;
+    height: auto;
+    background: none; /* Removes any background color */
+}
+
+/* Optional: Add some subtle animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.contact-form {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Optional: Toast Stack Effect */
+.toast-message:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+/* Optional: Hover Effect */
+.toast-message:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 16px rgba(0, 0, 0, 0.2),
+        0 0 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+/* Responsive Breakpoints */
+
+/* Ultra-Small Devices (up to 320px) */
+@media screen and (max-width: 320px) {
+    .contact-feedback-container {
+      padding: 15px; /* Reduce padding for smaller screens */
+    }
+  
+    .contact-feedback-container h1 {
+      font-size: 1.8rem; /* Reduce heading size */
+    }
+  
+    .contact-input input,
+    .contact-subject-select,
+    .contact-textarea {
+      font-size: 12px; /* Smaller font size for inputs */
+    }
+  
+    .contact-button {
+      font-size: 12px; /* Smaller font size for button */
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .toast-container {
+      bottom: 10px; /* Adjust toast position */
+      right: 10px;
+      left: 10px;
+    }
+  
+    .toast-message {
+      min-width: 0; /* Allow toast to take full width */
+      width: 100%;
+      padding: 12px; /* Reduce toast padding */
+    }
+  
+    .toast-text {
+      font-size: 13px; /* Reduce toast text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-feedback-container h1 {
+        font-size: 2rem; /* Further reduce heading size for very small screens */
+    }
+
+    .contact-input input,
+    .contact-subject-select,
+    .contact-textarea {
+        font-size: 14px; /* Smaller font size for inputs on very small screens */
+    }
+
+    .contact-button {
+        font-size: 14px; /* Smaller font size for button */
+        padding: 12px; /* Adjust padding for smaller screens */
+    }
+
+    .toast-container {
+        top: auto;
+        bottom: 20px;
+        right: 16px;
+        left: 16px;
+        max-width: none;
+    }
+
+    .toast-message {
+        min-width: 0;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-feedback-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px; /* Adds a gap between stacked elements */
+    }
+
+    .contact-form-container {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-input {
+        flex-direction: column;
+    }
+
+    .contact-image {
+        max-width: 90%;
+    }
+
+    .contact-feedback-container h1 {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .contact-textarea {
+        width: 95%; /* Full width for textarea on smaller screens */
+    }
+
+    .contact-button {
+        width: 100%; /* Full width for button on smaller screens */
+    }
+}
