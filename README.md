@@ -27,7 +27,7 @@
 
 | Home Page | Detection Page | Results Page |
 |-----------|--------------|--------------|
-| ![Home Page](ScreenShots/homepage.png) | ![Detection Page](ScreenShots/detectionpage.png) | ![Results](SreenShots/resultsection.png) |
+| ![Home Page](ScreenShots/homepage.png) | ![Detection Page](ScreenShots/detectionpage.png) | ![Results](ScreenShots/resultsection.png) |
 
 ---
 
