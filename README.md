@@ -1,4 +1,4 @@
-# ![Cancer Detective Logo](assets/CDLoogo.svg)
+# ![Cancer Detective Logo](frontend/CDLoogo.svg)
 
 # Cancer Detective Web App 🩺🔬
 
