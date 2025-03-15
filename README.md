@@ -1,4 +1,4 @@
-# ![Cancer Detective Logo](path/to/logo.png)
+# ![Cancer Detective Logo](assets/CDLoogo.svg)
 
 # Cancer Detective Web App 🩺🔬
 
@@ -27,8 +27,6 @@
 |-----------|--------------|--------------|
 | ![Home Page](path/to/homepage.png) | ![Detection Page](path/to/detection.png) | ![Results](path/to/results.png) |
 
-_(Replace `path/to/...` with actual image URLs or local paths)_
-
 ---
 
 ## 🚀 Installation Guide
@@ -56,7 +54,7 @@ python manage.py runserver
 ```sh
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 ---
@@ -85,7 +83,7 @@ npm start
 ---
 
 ## 💡 Contributors
-**Sangeeth Induruwa**  
+**Viraj Induruwa**  
 **Supervisor**: Mr. Isuru Samarappulige
 
 ---
