@@ -1,4 +1,6 @@
-# ![Cancer Detective Logo](frontend/CDLogo.svg)
+<p align="center">
+  <img src="frontend/CDLogo.svg" alt="Cancer Detective Logo" />
+</p>
 
 # Cancer Detective Web App 🩺🔬
 
